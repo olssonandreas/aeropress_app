@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/aeropress_app.iml" filepath="$PROJECT_DIR$/aeropress_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/aeropress_tba.iml" filepath="$PROJECT_DIR$/aeropress_tba.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
