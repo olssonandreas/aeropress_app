@@ -1,4 +1,7 @@
 aeropress_app
 =============
+---> Under progress 
 
-Aero press app. tba.
+Aero press application to guide you in how to create the best coffee in the world! 
+
+
