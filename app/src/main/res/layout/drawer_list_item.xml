@@ -17,12 +17,13 @@
 
     <TextView
         android:id="@+id/title"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/icon"
         android:minHeight="?android:attr/listPreferredItemHeight"
         android:textAppearance="?android:attr/textAppearanceSmallInverse"
-        android:textColor="@color/list_item_title"
+        android:textColor="@color/listitemtext"
         android:gravity="center_vertical"
         />
 

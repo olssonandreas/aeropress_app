@@ -2,33 +2,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2ECC71"
+    android:background="#ecf0f1"
     tools:context="ixdfreelance.aeropress_tba.MyFragment1">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageView
-        android:layout_width="363dp"
-        android:layout_height="272dp"
-        android:id="@+id/imageView"
-        android:background="@drawable/background"
-        android:scaleType = "centerCrop"
-        android:layout_gravity="center" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="119dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="AeroPress Coffee"
-        android:id="@+id/textView4"
-        android:layout_gravity="top" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OK"
+        android:layout_marginBottom="80dp"
+        android:text="Start"
         android:id="@+id/button"
         android:layout_gravity="center_horizontal|bottom"
         android:onClick="KanKallaDenVadJagVill"
         android:clickable="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/background"
+        android:scaleType = "centerCrop"
+        android:layout_gravity="center_horizontal|top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="119dp"
+        android:layout_marginTop="100dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AeroPress Coffee"
+        android:id="@+id/textView4"
+        android:layout_gravity="center" />
+
 </FrameLayout>
