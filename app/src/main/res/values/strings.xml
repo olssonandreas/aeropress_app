@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">aeropress_tba</string>
+    <string name="app_name">AeroPress</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
@@ -10,5 +10,25 @@
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="nav_drawer_items">
+        <item >Section</item>
+        <item >Section 2</item>
+        <item >Section 3</item>
+        <item >Section 4</item>
+        <item >Section 5</item>
+
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/coffemug_64x64</item>
+        <item>@drawable/filter_64x64</item>
+        <item>@drawable/stir_64x64</item>
+        <item>@drawable/plumb_64x64</item>
+        <item>@drawable/scoop_64x64</item>
+    </array>
+        <string name="desc_list_item_icon">Item Icon</string>
 
 </resources>

@@ -4,6 +4,7 @@ package ixdfreelance.aeropress_tba;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.Context;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -19,7 +20,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -28,6 +31,11 @@ import android.widget.Toast;
  * design guidelines</a> for a complete explanation of the behaviors implemented here.
  */
 public class NavigationDrawerFragment extends Fragment {
+
+
+
+
+    public String[] items;
 
     /**
      * Remember the position of the selected item.
@@ -84,6 +92,7 @@ public class NavigationDrawerFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         // Indicate that this fragment would like to influence the set of actions in the action bar.
         setHasOptionsMenu(true);
+
     }
 
     @Override
@@ -97,15 +106,19 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+
+        items = new String[]{
+                getString(R.string.title_section1),
+                getString(R.string.title_section2),
+                getString(R.string.title_section3)
+        };
+
+        mDrawerListView.setAdapter(new CustomArrayAdapter(
                 getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
-                }));
+                R.layout.fragment_navigation_drawer, items, iconImg));
+
+
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
@@ -278,5 +291,39 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
+    }
+
+
+    int[] iconImg = new int[]{
+            R.drawable.coffemug_64x64,
+            R.drawable.stir_64x64,
+            R.drawable.scoop_64x64,
+            R.drawable.filter_64x64,
+            R.drawable.plumb_64x64};
+
+
+    /**
+     * items är dom hårdkodade ,
+     *
+     */
+
+    private class CustomArrayAdapter extends ArrayAdapter<String>{
+
+        public CustomArrayAdapter(Context context, int resource, String[] items, int[] iconImg) {
+            super(context, resource, items);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View row = inflater.inflate(R.layout.drawer_list_item, parent, false);
+            TextView tv = (TextView) row.findViewById(R.id.title);
+            tv.setText(items[position]);
+            ImageView iv = (ImageView) row.findViewById(R.id.icon);
+            iv.setImageResource(iconImg[position]);
+
+
+            return row;
+        }
     }
 }
