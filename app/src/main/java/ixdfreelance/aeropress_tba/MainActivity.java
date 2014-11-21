@@ -13,15 +13,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
+
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -89,6 +88,7 @@ public class MainActivity extends Activity
         actionBar.setTitle(mTitle);
     }
 
+
     public void KanKallaDenVadJagVill (View v) {
         FragmentManager fragmentManager = getFragmentManager();
         Fragment fragment = new MyFragment2();
@@ -97,6 +97,32 @@ public class MainActivity extends Activity
                 .commit();
         Log.d("bajs","nu trycker jag");
     }
+//    public void StartBtn (View v) {
+//
+//        CountDownTimer countDownTimer = new CountDownTimer(10000, 997){
+//
+//
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//
+//                    TextView tv = (TextView) findViewById(R.id.counter);
+//                    tv.setText(((millisUntilFinished/1000)) + " sec");
+//                    System.out.println("Time: "+ millisUntilFinished);
+//                Button bt = (Button) findViewById(R.id.startTimerBtn);
+//                bt.setText("Pause");
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                // TODO Auto-generated method stub
+//                //action for when the timer has finished
+//                TextView tv = (TextView) findViewById(R.id.counter);
+//
+//                tv.setText("Begin pressing");
+//            }
+//        }.start();
+//    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (!mNavigationDrawerFragment.isDrawerOpen()) {
